@@ -1,7 +1,7 @@
 import re
 
-input_file = 'interface_ap.dat'
-output_file = 'output-s.dat'
+input_file = 'interface_ar_m1.dat'
+output_file = 'output-ar_m1.dat'
 
 # Read the contents of the input file
 with open(input_file, 'r', encoding='ansi') as file:
@@ -9,12 +9,12 @@ with open(input_file, 'r', encoding='ansi') as file:
 
 # Define the pattern for abnormal special characters to be excluded
 
-processed_content = re.sub(r'[^\w\s@\/|()`~*$#@!-,.;:\[{("]', '-', content)
+#processed_content = re.sub(r'[^\w\s@\/|()`~*$#@!-,.;:\[{("]', '-', content)
 
 # Replace abnormal special characters with hyphens
 
 # Write the processed content to the output file
 with open(output_file, 'w', encoding='utf-8') as file:
-    file.write(processed_content)
+    file.write(content)
 
 print("Special characters replaced. Output file: " + output_file)
